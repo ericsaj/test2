@@ -1,0 +1,14 @@
+.dashboardGrid {
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+@media only screen and (min-width: 900px) {
+    
+    .dashboardGrid {
+        display: grid; 
+        grid-template-columns: 10px 700px 1fr 10px;
+        grid-gap: 10px;
+    }
+}

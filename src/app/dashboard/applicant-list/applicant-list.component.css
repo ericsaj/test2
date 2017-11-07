@@ -1,0 +1,13 @@
+.selected {
+    background-color: grey;
+}
+.bookmarked {
+}
+
+td {
+    border-radius: 0;
+}
+
+.card-title {
+    font-weight: 700;
+}

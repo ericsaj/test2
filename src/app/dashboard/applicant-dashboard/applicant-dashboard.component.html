@@ -1,8 +1,16 @@
-<div class="row">
-  <div class="col s3">
-    <app-applicant-list [list]="applications"></app-applicant-list>
+<br>
+<div class="dashboardGrid">
+  <div></div>
+  <div class="">
+    <app-applicant-list 
+      [applications$]="applications$" 
+      [applicationsList]="applicationsList"
+      (select)="setSelectedApplication($event)" 
+      ></app-applicant-list>
   </div>
-  <div class="col s3">
-    <app-applicant></app-applicant>
+  <div class="">
+    <app-applicant [application]="selectedApplication" 
+    (setBookmark)="setBookmarkedApplication($event)"></app-applicant>
   </div>
+  <div></div>
 </div>

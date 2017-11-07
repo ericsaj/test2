@@ -1,0 +1,19 @@
+.availabilityGrid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    grid-gap: 10px;
+}
+
+.applicantGrid {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-gap: 10px;
+}
+
+.title {
+    font-weight: 700;
+}
+
+.card-title {
+    font-weight: 700;
+}
