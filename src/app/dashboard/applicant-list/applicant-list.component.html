@@ -1,52 +1,17 @@
 <section class="card">
-    <div class="card-title center">
-      Application List
-    </div>
+  <div class="card-title center">
+    Application List
+  </div>
 
-    <input *ngIf="config.filtering" placeholder="Filter all columns"
+  <input *ngIf="config.filtering" placeholder="Filter all columns"
     [ngTableFiltering]="config.filtering"
     class="form-control"
     (tableChanged)="onChangeTable(config)"/>
 
 
-    <ng-table [config]="config"
+  <ng-table [config]="config"
     (tableChanged)="onChangeTable(config)"
     (cellClicked)="onCellClick($event)"
     [rows]="rows" [columns]="columns">
-</ng-table>
-<!--
-    <div class="card-content">
-      <table class="bordered responsive-table highlight">
-        <thead>
-          <td class="center-align">
-            ID
-          </td>
-          <td class="center-align">
-            Name
-          </td>
-          <td class="center-align">
-            Posistion
-          </td>
-          <td class="center-align">
-            Experience
-          </td>
-        </thead>
-        <tbody>
-          <tr 
-          *ngFor="let aa of applicationsList"
-          (click)="selectApplicant(aa)"
-          [class.selected]="aa === selectedApplication" 
-          [class.bookmarked]="aa.bookmarked == 1"
-          >
-          <td class="center-align">{{aa.id}}</td>
-          <td>{{aa.name}}
-              <span *ngIf="aa.bookmarked == 1" class="badge new blue" data-badge-caption=""><i class="fa fa-bookmark" aria-hidden="true"></i></span>
-          </td>
-          <td class="center-align">{{aa.position}}</td>
-          <td class="center-align">{{aa.experience}}</td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-  -->
-  </section>
+  </ng-table>
+</section>
