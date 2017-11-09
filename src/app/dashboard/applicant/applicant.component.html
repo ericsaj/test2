@@ -18,6 +18,19 @@
         <div class="title">Applied:</div>
         <div class="left-align">{{application.applied}}</div>
       </div>
+      <div *ngIf="application.questions">
+        <br>
+        <div class="divider"></div>
+        <br>
+        <section class="applicationQuestionGrid">
+          <div class="title" >Question</div>
+          <div class="title">Answer</div>
+        </section>
+        <section *ngFor="let qq of application.questions" class="applicationQuestionGrid">
+          <div class="left-align">{{qq.text}}</div>
+          <div class="left-align">{{qq.answer}}</div>
+        </section>
+      </div>
       <br>
       <div class="divider"></div>
       <div class="section">

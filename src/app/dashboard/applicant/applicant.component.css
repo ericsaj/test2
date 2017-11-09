@@ -10,6 +10,12 @@
     grid-gap: 10px;
 }
 
+.applicationQuestionGrid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-gap: 10px; 
+}
+
 .title {
     font-weight: 700;
 }

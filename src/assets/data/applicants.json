@@ -42,6 +42,14 @@
         {
           "text":"Have you ever been convicted of a felony?",
           "answer":"Yes"
+        },
+        {
+          "text":"Have you ever been late to work?",
+          "answer":"No"
+        },
+        {
+          "text":"Have you ever quit a job?",
+          "answer":"Yes"
         }
       ]
     },

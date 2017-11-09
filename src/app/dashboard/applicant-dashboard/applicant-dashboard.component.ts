@@ -14,7 +14,6 @@ export class ApplicantDashboardComponent implements OnInit {
   applicationsList: Application[];
 
   constructor(private svc:ApplicantsService) { 
-    //this.applications$ = this.svc.loadApplications();
     this.svc.loadApplications()
     .subscribe( data => this.applicationsList = data );
   }
@@ -34,6 +33,5 @@ export class ApplicantDashboardComponent implements OnInit {
     }
     this.selectedApplication = application;
     this.svc.saveApplicantsData(this.applicationsList);
-    //this.svc.saveApplicantsData(this.applications$);
   }
 }

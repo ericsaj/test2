@@ -24,19 +24,20 @@ export class ApplicantsService {
       return Observable.of(data);
     }
 
+    // Get Data from Json file.  Store it in local storage
     return this.http.get<Application[]>('http://localhost:4200/assets/data/applicants.json')
     .do(data => this.cacheApplicantsData(data));
   }
 
-
+  // Store data in local storage
   private cacheApplicantsData(data) {
       const expiresAt = Date.now() + (1000 * 60 * 60 * 24 * ApplicantsService.LOCAL_STORAGE_CACHE_DURATION);
       localStorage.setItem(ApplicantsService.LOCAL_STORAGE_KEY, JSON.stringify(data));
       localStorage.setItem(ApplicantsService.LOCAL_STORAGE_TIME_KEY, JSON.stringify(expiresAt));
   }
 
+  // Save data do local storage
   saveApplicantsData(data) {
     this.cacheApplicantsData(data);
-    //this.cacheApplicantsData(data.value);
   }
 }

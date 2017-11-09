@@ -4,7 +4,7 @@
     grid-gap: 10px;
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1000px) {
     
     .dashboardGrid {
         grid-template-columns: 10px 700px 1fr 10px;

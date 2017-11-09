@@ -26,7 +26,7 @@ export class ApplicantListComponent implements OnInit {
     {title: 'Experience', name: 'experience', sort: '?string', filtering: {filterString: '', placeholder: 'Filter by experience'}},
   ];
   public page:number = 1;
-  public itemsPerPage:number = 10;
+  public itemsPerPage:number = 25;
   public maxSize:number = 5;
   public numPages:number = 1;
   public length:number = 0;
@@ -38,17 +38,11 @@ export class ApplicantListComponent implements OnInit {
     className: ['table-striped', 'table-bordered']
   };
 
-  //private data:Array<any> = TableData;
-
-
   constructor() {
-    //console.log( this.applicationsList );
-    //this.length = this.applicationsList.length;
     this.length = 5;
   }
 
   public ngOnInit():void {
-    //console.log( this.applicationsList );
     this.length = this.applicationsList.length;
     this.onChangeTable(this.config);
   }
@@ -153,5 +147,4 @@ export class ApplicantListComponent implements OnInit {
     this.selectedApplication = data.row;
     this.select.emit(data.row);
   }
-
 }
